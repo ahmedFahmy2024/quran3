@@ -2,11 +2,16 @@
 
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTLinkingManager.h>
+#import <React/RCTI18nUtil.h>
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+
+// Enable RTL layout
+  [[RCTI18nUtil sharedInstance] allowRTL:YES];
+
   self.moduleName = @"main";
 
   // You can add your custom initial props in the dictionary below.
